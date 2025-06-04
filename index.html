@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Discord Bot Info Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #5a5a5a;
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+        .section p {
+            margin-bottom: 10px;
+        }
+        .discord-interaction-box {
+            background-color: #e6e6e6;
+            padding: 10px;
+            border-left: 5px solid #7289da;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            word-break: break-all;
+            margin-top: 15px;
+            font-size: 0.9em;
+        }
+        .discord-link-button {
+            display: inline-block;
+            background-color: #7289da; /* Discord blue */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            margin-top: 15px;
+        }
+        .discord-link-button:hover {
+            background-color: #677bc4;
+        }
+        .notification-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .notification-list li {
+            background-color: #e9ecef;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .alliance-member {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px dotted #eee;
+        }
+        .alliance-member:last-child {
+            border-bottom: none;
+        }
+        .growth-indicator {
+            font-weight: bold;
+            color: green; /* Default for positive growth */
+        }
+        .alliance-stats-summary {
+            padding: 10px;
+            border-bottom: 1px dashed #ddd;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .alliance-stats-summary div {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My Discord Bot Info Hub</h1>
+        <p style="text-align: center;">All bot functionalities are accessed by initiating the <strong>`/settings`</strong> command in Discord, which opens an interactive menu.</p>
+
+        <div class="section" id="giftcode-redemption">
+            <h2>Gift Code Redemption</h2>
+            <p>To redeem a gift code, begin by using the <strong>`/settings`</strong> command in any Discord channel where My Bot is present.</p>
+            <p><strong>How to redeem:</strong></p>
+            <ol>
+                <li>Go to any Discord channel where My Bot is active.</li>
+                <li>Type <code>/settings</code> and press Enter.</li>
+                <li>In the main "Settings Menu", click the "Gift Code Operations" button.</li>
+                <li>From the "Gift Code Operations" menu, if you're an alliance member redeeming for the alliance, click the <strong>"Use Gift Code for Alliance"</strong> button. For general individual redemption, your bot might monitor a "Gift Code Channel" or present another direct redemption option; please follow the bot's prompts.</li>
+                <li>Follow the bot's subsequent instructions (e.g., entering your code).</li>
+            </ol>
+            <div class="discord-interaction-box">
+                <p>Path to redemption:</p>
+                <code>/settings</code><br>
+                <span>&rarr; Click "Gift Code Operations"</span><br>
+                <span>&rarr; Click "Use Gift Code for Alliance" (for alliances, or follow other bot prompts)</span>
+            </div>
+            <p>If you encounter any issues, please contact an administrator on our Discord server.</p>
+            <a href="YOUR_DISCORD_INVITE_LINK" target="_blank" class="discord-link-button">Join Our Discord Server</a>
+        </div>
+
+        <div class="section" id="alliance-growth">
+            <h2>Alliance Growth Tracking</h2>
+            <p>Below is the latest alliance growth data, updated periodically on this page. For real-time member lists, recent changes, and detailed growth statistics, use the <strong>`/settings`</strong> command in Discord.</p>
+            <div id="membersList">
+                <div class="alliance-stats-summary">
+                    <div>Total Members: 98</div>
+                    <div>Highest Level: FC 10</div>
+                    <div>Average Level: FC 6</div>
+                </div>
+                <div class="alliance-member">
+                    <span><strong>01. ⚔️oouAEoo</strong></span>
+                    <span class="growth-indicator">FC: 10</span>
+                </div>
+                <div class="alliance-member">
+                    <span><strong>02. ⚔️ALMAFIA KWT</strong></span>
+                    <span class="growth-indicator">FC: 9</span>
+                </div>
+                <div class="alliance-member">
+                    <span><strong>03. ⚔️General Hamdi</strong></span>
+                    <span class="growth-indicator">FC: 9</span>
+                </div>
+                <div class="alliance-member">
+                    <span><strong>04. ⚔️Nader</strong></span>
+                    <span class="growth-indicator">FC: 9</span>
+                </div>
+                <div class="alliance-member">
+                    <span><strong>05. ⚔️OMAR&</strong></span>
+                    <span class="growth-indicator">FC: 9</span>
+                </div>
+                <div class="alliance-member">
+                    <span><strong>06. ⚔️The Cure</strong></span>
+                    <span class="growth-indicator">FC: 9</span>
+                </div>
+                <div class="alliance-member">
+                    <span><strong>07. ⚔️@Karla</strong></span>
+                    <span class="growth-indicator">FC: 9</span>
+                </div>
+                <p style="font-size: 0.9em; margin-top: 15px;">Data last updated on: <span id="lastUpdateAlliance">June 4, 2025, 10:22 AM +01</span></p>
+                </div>
+            <p style="margin-top: 20px;">Use the Discord command for the most current data and history:</p>
+            <div class="discord-interaction-box">
+                <p>Path to view Alliance Member List (current stats and FC levels):</p>
+                <code>/settings</code><br>
+                <span>&rarr; Click "Alliance Member Operations"</span><br>
+                <span>&rarr; Click "View Members"</span>
+                <p>Path to view Alliance History (Furnace Level Changes, Nickname Changes, etc.):</p>
+                <code>/settings</code><br>
+                <span>&rarr; Click "Alliance History"</span><br>
+                <span>&rarr; From the "Alliance History Menu", click "Furnace Changes", "Nickname Changes", or other relevant history options.</span>
+            </div>
+        </div>
+
+        <div class="section" id="event-notifications">
+            <h2>Event Notifications</h2>
+            <p>Here are recent announcements and upcoming events. All official announcements are also made on our Discord server.</p>
+            <div class="notification-list">
+                <ul id="eventNotificationsList">
+                    <li><strong>New Event:</strong> "Summer Festival" starts on July 1st! (Announced: June 1, 2025)</li>
+                    <li><strong>Reminder:</strong> Weekly Guild Meeting - Every Sunday at 7 PM UTC. (Announced: May 28, 2025)</li>
+                    <li><strong>Patch Notes:</strong> Game update 3.0 deployed! See Discord for details. (Announced: May 25, 2025)</li>
+                    </ul>
+            </div>
+            <p style="font-size: 0.9em; margin-top: 15px;">For real-time event updates and to set personal reminders, join our Discord server!</p>
+            <a href="YOUR_DISCORD_INVITE_LINK" target="_blank" class="discord-link-button">Join Our Discord Server</a>
+            <p style="margin-top: 20px;">Admins: To send or manage event notifications, use the <strong>`/settings`</strong> command and navigate through the menu to find the appropriate tools, likely under "Other Features" or "Bot Operations".</p>
+            <div class="discord-interaction-box">
+                <p>Admin path for notifications/time systems:</p>
+                <code>/settings</code><br>
+                <span>&rarr; Click "Other Features"</span><br>
+                <span>&rarr; Click "Bear Trap" (Time notification system) to manage timed events.</span><br>
+                <span>&rarr; Also check "Bot Operations" or look for a "Manage notification" button in the initial `/settings` response for general announcements.</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set the last update time for alliance data dynamically based on current time
+        document.getElementById('lastUpdateAlliance').textContent = new Date().toLocaleString('en-US', {
+            year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false, timeZoneName: 'short'
+        });
+
+        // IMPORTANT: Replace 'YOUR_DISCORD_INVITE_LINK' with your actual Discord server invite link
+        const discordInviteLinks = document.querySelectorAll('.discord-link-button');
+        discordInviteLinks.forEach(link => {
+            link.href = 'https://discord.gg/YourActualInviteCodeHere'; // <<<<< CHANGE THIS TO YOUR REAL INVITE LINK
+        });
+    </script>
+</body>
+</html>
